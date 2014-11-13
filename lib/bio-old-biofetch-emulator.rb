@@ -8,5 +8,5 @@
 #
 # In this file only require other files. Avoid other source code.
 
-require 'bio-old-biofetch-emulator/old-biofetch-emulator.rb'
+require 'bio-old-biofetch-emulator/emulator.rb'
 
