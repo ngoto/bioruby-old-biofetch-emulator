@@ -380,14 +380,17 @@ module Bio
       end
     end #module Query
 
+    DONT_OVERRIDE = ::Bio::Fetch.const_defined?(:EBI) ?
+    [ Client, ::Bio::Fetch::EBI ] : [ Client ]
 
     class << ::Bio::Fetch
 
       alias_method :new_without_old_biofetch_emulator, :new
 
       def new_with_old_biofetch_emulator(*arg)
-        if !self.ancestors.include?(Client) &&
-            !self.ancestors.include?(::Bio::Fetch::EBI) then
+        tmp = self.ancestors
+        if (tmp - DONT_OVERRIDE).size == tmp.size then
+          $stderr.puts self
           case arg.size
           when 0
             return Client.new
