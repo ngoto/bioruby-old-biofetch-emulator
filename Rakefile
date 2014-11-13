@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bio-old-biofetch-emulator"
   gem.homepage = "http://github.com/ngoto/bioruby-old-biofetch-emulator"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Emulates as if old BioRuby BioFetch alives}
+  gem.description = %Q{Emulator that emulates Bio::Fetch object in BioRuby as if old BioRuby BioFetch server were still alive. It overrides methods and objects in Bio::Fetch, and if the old BioRuby BioFetch server's URL is given, it intercepts all requests and converts them into existing web services such as TogoWS, KEGG REST API, NCBI E-Utilities, and GenomeNet(genome.jp).}
   gem.email = "ng@bioruby.org"
   gem.authors = ["Naohisa Goto"]
   # dependencies defined in Gemfile
