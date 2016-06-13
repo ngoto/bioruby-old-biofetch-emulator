@@ -2,9 +2,14 @@
 
 [![Build Status](https://secure.travis-ci.org/ngoto/bioruby-old-biofetch-emulator.png)](http://travis-ci.org/ngoto/bioruby-old-biofetch-emulator)
 
-Full description goes here
+Emulator that emulates Bio::Fetch object in BioRuby as if discontinued
+BioRuby BioFetch server were still alive. It overrides methods and objects
+in Bio::Fetch, and if the old BioRuby BioFetch server's URL is given,
+it intercepts all requests and converts them into existing web services
+such as TogoWS, KEGG REST API, NCBI E-Utilities, and GenomeNet(genome.jp).
 
-Note: this software is under active development!
+Note: this software may fail to work depending on the status of the above
+servers.
 
 ## Installation
 
@@ -18,17 +23,18 @@ gem install bio-old-biofetch-emulator
 require 'bio-old-biofetch-emulator'
 ```
 
+In general, to run existing software using the BioRuby BioFetch server, no
+additional code is needed other than `require 'bio-old-biofetch-emulator'`.
+
 The API doc is online. For more code examples see the test files in
 the source tree.
-        
+
 ## Project home page
 
 Information on the source tree, documentation, examples, issues and
 how to contribute, see
 
   http://github.com/ngoto/bioruby-old-biofetch-emulator
-
-The BioRuby community is on IRC server: irc.freenode.org, channel: #bioruby.
 
 ## Cite
 
