@@ -390,7 +390,7 @@ module Bio
       def new_with_old_biofetch_emulator(*arg)
         tmp = self.ancestors
         if (tmp - DONT_OVERRIDE).size == tmp.size then
-          $stderr.puts self
+          #$stderr.puts self
           case arg.size
           when 0
             return Client.new
