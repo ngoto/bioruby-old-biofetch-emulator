@@ -12,4 +12,5 @@ group :development do
   gem "rdoc"
   gem "jeweler"
   gem "bundler", ">= 1.0.21"
+  gem "test-unit"
 end
